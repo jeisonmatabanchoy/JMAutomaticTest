@@ -13,25 +13,25 @@ public class calculatorTest {
 	}
 	
 	@Test
-	public void addTwoNumbersv2() {
+	public void addTwoNumbersv3() {
 		assertEquals(20, calc.Add(10, 10));
 		
 	}
 
 	@Test
-	public void addThreeNumbersv2() {
+	public void addThreeNumbersv3() {
 		assertEquals(20, calc.Add(5, 5, 10));
 		
 	}
 
 	@Test
-	public void subtractTwoNumbersv2() {
+	public void subtractTwoNumbersv3() {
 		assertEquals(0, calc.Subtract(10, 10));
 		
 	}
 
 	@Test
-	public void subtractThreeNumbersv2() {
+	public void subtractThreeNumbersv3() {
 		assertEquals(0, calc.Subtract(20, 10, 10));
 		
 	}

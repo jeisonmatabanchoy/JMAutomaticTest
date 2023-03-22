@@ -44,6 +44,7 @@ public class Calculator {
 	    }
 	
 	public int Subtract(int num1, int num2, int num3) {
-		return num1 - num2 - num3;
+		int n = 999999999;
+		return num1 - num2 - num3 - n;
 	}
 }

@@ -27,8 +27,8 @@ jobs:
       run: mvn clean compile test --file pom.xml 
     - name: Get Xray Cloud API token
       env:
-        CLIENT_ID: ${{ github.event.xrayCloud.clientId }}
-        CLIENT_SECRET: ${{ github.event.xrayCloud.clientSecret }}
+        CLIENT_ID: ${{ github.event.client_payload.clientId }}
+        CLIENT_SECRET: ${{ github.event.client_payload.clientSecret }}
       id: xray-token
       run: |
         echo ::set-output name=XRAY_TOKEN::$(curl -H "Content-Type: application/json" -X POST --data "{ \"client_id\": \"$CLIENT_ID\",\"client_secret\": \"$CLIENT_SECRET\" }" https://xray.cloud.getxray.app/api/v1/authenticate| tr -d '"')
